@@ -4,6 +4,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_december2/bottombar.dart';
+import 'package:flutter_december2/convex_bottomnavigation.dart';
 import 'package:lottie/lottie.dart';
 
 import 'home.dart';
@@ -13,7 +14,7 @@ void main(){
     enabled: !kReleaseMode;
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch().copyWith(primary: Color(0XFF2E7D32))
+        colorScheme: ColorScheme.fromSwatch().copyWith(primary: Colors.blueAccent)
       ),
       debugShowCheckedModeBanner: false,
       useInheritedMediaQuery: true,
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Bottom_Bar()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Convex_Bottom_Naviogation()));
     });
   }
   @override
