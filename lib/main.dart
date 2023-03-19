@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_december2/bottombar.dart';
 import 'package:flutter_december2/convex_bottomnavigation.dart';
+import 'package:flutter_december2/navigation_drawe.dart';
 import 'package:lottie/lottie.dart';
 
 import 'home.dart';
@@ -34,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Convex_Bottom_Naviogation()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Navigation_Drawe()));
     });
   }
   @override

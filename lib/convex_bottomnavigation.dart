@@ -33,7 +33,8 @@ class _Convex_Bottom_NaviogationState extends State<Convex_Bottom_Naviogation> {
       });
 
     },
-  )
+  ),
+  body: screens[index],
 
     );
   }
