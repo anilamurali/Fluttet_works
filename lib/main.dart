@@ -4,8 +4,10 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_december2/bottombar.dart';
+import 'package:flutter_december2/carousal_example.dart';
 import 'package:flutter_december2/convex_bottomnavigation.dart';
 import 'package:flutter_december2/navigation_drawe.dart';
+import 'package:flutter_december2/sliver_example.dart';
 import 'package:lottie/lottie.dart';
 
 import 'home.dart';
@@ -35,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Navigation_Drawe()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Carousal_Example()));
     });
   }
   @override
@@ -63,7 +65,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children:  [
               Lottie.network("https://assets1.lottiefiles.com/packages/lf20_mxg41wj1.json"),
               
-              Text("MY APPLICATON",style: TextStyle(fontSize: 40,color: Color.fromARGB(255, 1, 33, 59)),),
+             const Text("MY APPLICATON",style: TextStyle(fontSize: 40,color: Color.fromARGB(255, 1, 33, 59)),),
             ],
           ),
         ),
