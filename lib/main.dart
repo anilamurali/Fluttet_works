@@ -3,14 +3,18 @@ import 'dart:async';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_december2/bottom_sheet_oneplus.dart';
 import 'package:flutter_december2/bottombar.dart';
 import 'package:flutter_december2/carousal_example.dart';
 import 'package:flutter_december2/convex_bottomnavigation.dart';
 import 'package:flutter_december2/navigation_drawe.dart';
+import 'package:flutter_december2/passing%20data%20%20between%20screens/first_screen.dart';
 import 'package:flutter_december2/sliver_example.dart';
 import 'package:lottie/lottie.dart';
 
+import 'bottom_sheet.dart';
 import 'home.dart';
+import 'passing data  between screens/second_screen.dart';
 
 void main(){
   runApp(DevicePreview(builder: (context){
@@ -23,7 +27,11 @@ void main(){
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: SplashScreen(),);
+      home: FirstPage(),
+      routes: {
+        "second":(context) => SecondPage(),
+      },
+      );
     
   }));
 }
@@ -37,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     
     Timer(Duration(seconds: 10), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Carousal_Example()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>BotomSheet_IconPlus()));
     });
   }
   @override
