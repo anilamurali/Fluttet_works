@@ -24,6 +24,6 @@ class FirstPage extends StatelessWidget {
   }
   
  void goToSecond(BuildContext context, productId) {
-    Navigator.pushNamed(context, "second");
+    Navigator.pushNamed(context, "second",arguments: productId);
   }
 }

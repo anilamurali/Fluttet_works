@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_december2/passing%20data%20%20between%20screens/dummy_data.dart';
 
 class SecondPage extends StatelessWidget {
@@ -17,16 +15,18 @@ class SecondPage extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Column(
           children: [
-            Container(
-              height: 100,
-              width: 100,
-              decoration:  BoxDecoration(
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(product["image"]))
-              ),
-            ),
-            Text("${product["name"]}",style: const TextStyle(fontWeight: FontWeight.bold),),
+            // Container(
+            //   height: 100,
+            //   child: Image(image: NetworkImage(product["image"])),
+             
+            //   // decoration:  BoxDecoration(
+            //   //   image: DecorationImage(
+            //   //     fit: BoxFit.cover,
+            //   //     image: NetworkImage(product["image"]))
+            //   // ),
+            // ),
+           Image(image: NetworkImage(product["image"])),
+            Text("${product["name"]}"),
             Text("${product["price"]}"),
             Text("${product["description"]}"),
             Text("${product["rating"]}"),
