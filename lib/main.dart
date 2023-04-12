@@ -12,6 +12,8 @@ import 'package:flutter_december2/clippers.dart';
  import 'package:flutter_december2/expansiontile_assignment.dart';
 import 'package:flutter_december2/fitted_box.dart';
 import 'package:flutter_december2/sampleanimation.dart';
+import 'package:flutter_december2/samplefont.dart';
+import 'package:flutter_december2/shared%20preferences/login.dart';
 import 'package:flutter_december2/wrap_widget.dart';
 // import 'package:flutter_december2/expation_tile.dart';
 // import 'package:flutter_december2/media%20query/example.dart';
@@ -38,7 +40,7 @@ void main(){
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home:  Rotated_Animation(),
+      home:  Login_page(),
       // routes: {
       //   "second":(context) => SecondPage(),
       // },
