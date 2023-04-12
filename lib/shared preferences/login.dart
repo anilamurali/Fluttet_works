@@ -21,7 +21,16 @@ class _Login_pageState extends State<Login_page> {
   }
   void check_if_already_login() async{
       logindata=await SharedPreferences.getInstance();
-      //newuser=(logindata.getBool('newuser')??)
+      newuser=(logindata.getBool('newuser')?? true);
+      print(newuser);
+      if(newuser==false){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Home()));
+      }
+  }
+  void dispose(){
+    usename_controller.dispose();
+    password_controller.dispose();
+    super.dispose();
   }
   Widget build(BuildContext context) {
     return Scaffold(
